@@ -1,0 +1,42 @@
+//program to implement stack
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void insert();
+void del();
+void travers();
+ int a[10],i=-1;
+ void main()
+ {
+ int n;
+ char ch;
+ do
+ {
+ printf("\n\t enter your choice\n");
+ printf("\t Press 1. for insertion\n");
+ printf("\t Press 2. for deletion\n");
+ printf(" \t Press 3. for traversing\n");
+ printf("\t Press 4. for exit\n");
+ scanf("%d",&n);
+ switch(n)
+ {
+ case 1:
+  insert();
+  braek;
+ case 2:
+ del();
+ break;
+ case 3:
+ travers();
+ break;
+ casev 4:
+ exit(0);
+ default:
+ printf("your choice is invalid please try again\n");
+ }
+ printf("want to continue press y or n\n");
+ ch=getch();
+ }while(ch=='y');
+ getch();
+ }
+

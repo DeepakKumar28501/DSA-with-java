@@ -1,0 +1,94 @@
+// p4rogram to implement of queue
+#include<stdio.h>
+#include<conio.h>
+int queue[5],i ,info,front=-1,rear=-1;
+void inqueue();
+void display();
+void main()
+{
+
+int choice;
+clrscr();
+inqueue();
+while(1)
+{
+printf("* * * * * menu * * * * * \n");
+printf("Press 1. for insertion\n");
+printf("Press 2. for deletion\n");
+printf("Press 3. for display\n");
+printf(" Press 4. for exit\n");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1:
+if(rear<4)
+{
+printf("enter the number\n");
+scanf("%d",&info);
+if(front==-1)
+{
+front=0;
+rear=0;
+//queue[rear]=info
+}
+else
+{
+rear=rear+1;
+}
+queue[rear]=info;
+}
+else
+{
+printf("queue is full\n");
+getch();
+break;
+}
+break;
+case 2:
+if(front!=-1)
+{
+
+info=queue[front];
+if(front==rear)
+{
+front=-1;
+rear=-1;
+}
+else
+{
+front=front+1;
+printf("item deletionn:%d",info);
+}
+}
+else
+{
+printf("queue is empity\n");
+getch();
+break;
+}
+break;
+case 3:
+display();
+break;
+case 4:
+exit(0);
+default:
+printf("your choice is invalid please try again\n");
+getch();
+break;
+}
+}
+}
+void inqueue()
+{
+front=-1;
+rear=-1;
+}
+void display()
+{
+printf(" traaversing opg queue is:\n\n");
+for(i=front;i<=rear;i++)
+{
+printf("%d\n\n",queue[i]);
+}
+}

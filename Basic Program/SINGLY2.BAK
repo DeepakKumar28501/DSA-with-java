@@ -1,0 +1,125 @@
+//inserting and traversing the element of a linked list
+#include<stdio.h>
+#include<conio.h>
+#include<malloc.h>
+struct node
+{
+int num;
+struct node *next;
+};
+typedef struct node NODE;
+NODE *start;
+void createmptylist(NODE *start)
+{
+start=NULL;
+}
+void travers(NODE *start)
+{
+P=start;
+while(P!=NULL)
+{
+printf("%d\n",P->num);
+P=P->next;
+}
+}
+void insertatbegin(int item)
+{
+NODE *P;
+P=(NODE *)malloc(sizeof(NODE));
+P->num=item;
+if(start==NULL)
+{
+ P->next=NULL;
+ }
+ else
+ {
+ ptr->next=NULL;
+ start=P;
+ }
+
+ void insert_at_end(int item)
+ {
+ NODE *P,*loc;
+ P=(NODE *)malloc(sizeof(NODE));
+ P->num=item;
+ P->next=NULL;
+ if(start==NULL)
+ start=P;
+ else
+ {
+ loc=start;
+ while(loc->next!=NULL)
+ {
+ loc=loc->next;
+ loc->next=p;
+ }
+ }
+
+ void insert_spe(int item,int loc)
+ {
+ NODE *P,*temp;
+ int k;
+ for(k=0,temp=start;k<loc;k++);
+ {
+ temp=temp->next;
+ if(temp==NULL)
+ {
+ printf("\nnode in the list at less than one\n");
+ return;
+ }
+ }
+ P=(NODE*)malloc(sizeof(NODE));
+ P->num=item;
+ P->next=loc->next;
+ loc->next=P;
+ }
+ void main()
+ {
+ int bchoice,item,after;
+ char ch;
+ clrscr();
+ createmptylist(star);
+ do
+ {
+ clrscr();
+ printf("1.Insert element at begin\n");
+ printf("2.Insert element at end position\n");
+ printf("3.Insert element at specific position\n");
+ printf("4.travers the list in order\n");
+ printf("5.exit\n");
+ printf("Enter your choice\n");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ case 1:
+	printf("Enter the item\n");
+	scanf("%d",&item);
+	insertatbegin(item);
+	break;
+  case 2:
+	printf("Enter the item\n");
+	scanf("%d",&item);
+	insert_at_end(item);
+	break;
+  case 3:
+	printf("Enter the item\n");
+	scanf("%d",&item);
+	inser_spe(item);
+	break;
+  case 4:
+	printf("Travers the list\n");
+	traverse(start)
+	break;
+  case 5:
+  exit(0)
+  }
+  }
+  while(choice!=5);
+  }
+
+
+
+
+
+
+
